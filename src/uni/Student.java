@@ -10,6 +10,7 @@ public class Student {
     public final int entranceYear;
     public int majorID;
     public String studentID;
+    public String name;
 
     public Student(int personID, int entranceYear, int majorID) {
         this.personID = personID;

@@ -8,6 +8,8 @@ public class Professor {
     public static ArrayList<Professor> professorList = new ArrayList<>();
     public int personID;
     public int majorID;
+    public String name;
+
 
     public Professor(int personID, int majorID) {
         this.personID = personID;
@@ -18,7 +20,7 @@ public class Professor {
 
     public static Professor findByID(int id) {
         for (Professor findProfessor : professorList) {
-            if (findProfessor.id == id) {
+            if (findProfessor.id + 3 == id) {
                 return findProfessor;
             }
         }
