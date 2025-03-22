@@ -5,10 +5,10 @@
 حالا اگه بخوام از ساختار دونه دونه ی کلاسا بگم :
 کلاس Person :
 بعد از تعریف تمام فیلد ها یه این شکل: 
-`public int id;
+```public int id;
     public static ArrayList<Person> personList = new ArrayList<>();
     public String name;
-    public final String nationalID;`
+    public final String nationalID;```
 کانستراکتور Person رو له این شکل نوشتم: 
 `public Person(String name, String nationalID){
         this.name = name;
