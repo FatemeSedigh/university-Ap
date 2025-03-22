@@ -5,14 +5,17 @@
 حالا اگه بخوام از ساختار دونه دونه ی کلاسا بگم :
 کلاس Person :
 بعد از تعریف تمام فیلد ها یه این شکل: 
-```public int id; public static ArrayList<Person> personList = new ArrayList<>(); public String name; public final String nationalID;```
+`public int id; 
+public static ArrayList<Person> personList = new ArrayList<>(); 
+public String name;
+public final String nationalID;`
 کانستراکتور Person رو له این شکل نوشتم: 
-public Person(String name, String nationalID){
+`public Person(String name, String nationalID){
         this.name = name;
         this.nationalID = nationalID;
         personList.add(this);
         id = personList.size();
-    }
+    }`
 وقتی یک شیء جدید ساخته میشه نام و کد ملی آن را می‌گیره و در شیء ذخیره می‌کنه.بعدش این شیء به یک لیست اضافه میشه تا همه اشیاء در آن نگهداری شوند
 بعد، به شیء یک شماره منحصر به فرد داده می‌شود که برابر با تعداد اشیاء موجود در لیسته. مثلاً اگر این شیء سومین شیء باشد، شماره آن ۳ خواهد بود.
 سپس متد زیر را به این شکل :
