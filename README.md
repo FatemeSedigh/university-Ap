@@ -13,16 +13,28 @@
 public static ArrayList<Person> personList = new ArrayList<>(); 
 public String name;
 public final String nationalID;`
-کانستراکتور Person رو له این شکل نوشتم: 
+
+
+
+کانستراکتور Person رو له این شکل نوشتم:
+
+
+
 `public Person(String name, String nationalID){
         this.name = name;
         this.nationalID = nationalID;
         personList.add(this);
         id = personList.size();
     }`
+
+
+    
 وقتی یک شیء جدید ساخته میشه نام و کد ملی آن را می‌گیره و در شیء ذخیره می‌کنه.بعدش این شیء به یک لیست اضافه میشه تا همه اشیاء در آن نگهداری شوند
 بعد، به شیء یک شماره منحصر به فرد داده می‌شود که برابر با تعداد اشیاء موجود در لیسته. مثلاً اگر این شیء سومین شیء باشد، شماره آن ۳ خواهد بود.
 سپس متد زیر را به این شکل :
+
+
+
 `public static Person findByID(int id){
         for(Person findPerson : personList){
             if(findPerson.id == id){
@@ -31,28 +43,46 @@ public final String nationalID;`
         }
         return null;
     }`
+
+
+    
 این متد یک شماره (id) می‌گیره و شیء مربوط به آن شماره را در لیست personList پیدا می‌کنه.
 لیست را بررسی می‌کنه و هر شیء را با شماره‌ای که دادیم مقایسه می‌کنه.
 اگر شیء با آن شماره پیدا شه اونو برمیگردونه.
 اگر شیء پیدا نشه، null برمی‌گردونه (یعنی چیزی پیدا نشده است)
 حالا میریم سراغ کلاس Course :
 در ابتدا اول فیلد هارو به این شکل تعریف کردم 
+
+
+
 `public int id;
     public static ArrayList<Course> courseList = new ArrayList<>();
     public String title;
     public int units;`
+
+
+    
 بعد کانستراکتور Course رو :
+
+
+
 `public Course(String title, int units) {
         this.title = title;
         this.units = units;
         courseList.add(this);
         this.id = courseList.size();
     }`
+
+
+    
     
  این کد یک سازنده برای کلاس «Course» است. 
 وقتی یک شیء جدید ساخته می‌شود، عنوان درس و تعداد واحدهای آن را می‌گیرد و در شیء ذخیره می‌کند. بعد، این شیء به یک لیست اضافه می‌شود تا همه درس‌ها در آن نگهداری شوند.
  سپس به درس یک شماره منحصر به فرد داده می‌شود که برابر با تعداد درس‌های موجود در لیست است.
  مثلاً اگر این درس سومین درس باشد، شماره آن ۳ می‌شود. این کد برای مدیریت و سازمان‌دهی اطلاعات درس‌ها استفاده می‌شود
+ 
+ 
+ 
  `public static Course findByID(int id) {
         for (Course findCourse : courseList) {
             if (findCourse.id == id) {
@@ -61,6 +91,9 @@ public final String nationalID;`
         }
         return null;
     }`
+
+
+    
 این کد یک متد برای پیدا کردن درس بر اساس شماره‌اش است.
 یک شماره می‌گیره و توی لیست درس‌ها می‌گرده تا ببینه کدوم درس شماره‌اش با شماره داده شده برابر است. 
 اگر درس رو پیدا کنه، همون درس رو برمی‌گردونه. اگر هم چیزی پیدا نکنه، خالی (null) برمی‌گردونه.
@@ -68,6 +101,9 @@ public final String nationalID;`
 میریم سراغ کلاس Major:
 ساختار ابتدای این کلاس دقیقا مانند کلاس های پیشین است 
 تا این یخش :
+
+
+
 `public static Major findByID(int id) {
         for (Major findMajor : majorList) {
             if (findMajor.id == id) {
@@ -85,13 +121,21 @@ public final String nationalID;`
             System.out.println("Cannot add more students to " + name + ". Capacity is full.");
         }
     }`
+
+
+
+    
  متد findByID:
 این متد یک شماره می‌گیره و توی لیست رشته‌ها می‌گرده تا ببینه کدوم رشته شماره‌اش با شماره داده شده برابر است. 
 اگر رشته رو پیدا کنه، همون رشته رو برمی‌گردونه. اگر چیزی پیدا نکنه، خالی (null) برمی‌گردونه. 
  متد addStudent:
 این متد یک دانشجو به رشته اضافه می‌کنه. 
 اگر تعداد دانشجوها از ظرفیت رشته کمتر باشه، دانشجو رو اضافه می‌کنه و تعداد دانشجوها رو یکی زیاد می‌کنه. 
-اگر ظرفیت رشته پر باشه، پیامی می‌ده که دیگه نمی‌شه دانشجو اضافه کرد. 
+اگر ظرفیت رشته پر باشه، پیامی می‌ده که دیگه نمی‌شه دانشجو اضافه کرد.
+
+
+
+
 
 
 کلیت این کد همینه و لگد بخوام بیشتر همش تیکه تیکه توضیح بدم تکراری میشه 
