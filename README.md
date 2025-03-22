@@ -73,14 +73,14 @@
         return null;
     }`
 
-    public void addStudent() {
+    `public void addStudent() {
         if (numberOfStudents < capacity) {
             numberOfStudents++;
             System.out.println("Student added to " + name + ". Current number of students: " + numberOfStudents);
         } else {
             System.out.println("Cannot add more students to " + name + ". Capacity is full.");
         }
-    }
+    }`
  متد findByID:
 این متد یک شماره می‌گیره و توی لیست رشته‌ها می‌گرده تا ببینه کدوم رشته شماره‌اش با شماره داده شده برابر است. 
 اگر رشته رو پیدا کنه، همون رشته رو برمی‌گردونه. اگر چیزی پیدا نکنه، خالی (null) برمی‌گردونه. 
